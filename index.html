@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Inspector</title>
+
+
+    <!--
+      redirect users to the https version of the website.
+      but: only check when on the production domain, as set in _config.yml.
+     -->
+    <script type="text/javascript">
+      var enforce = "clarkbw.github.io";
+      if ((enforce === window.location.host) && (window.location.protocol !== 'https:'))
+        window.location = window.location.toString().replace(/^http:/, 'https:');
+    </script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    #inspector {
+      position: absolute;
+      border: 1px dashed rgba(224, 224, 224, 0.75);
+      background-color: rgba(51, 122, 183, 0.50);
+      transition: background-color 1s, border 1s;
+    }
+    #inspector.locked {
+      background-color: rgba(51, 122, 183, 0.0);
+      border-color: rgba(51, 122, 183, 0.50);
+    }
+    </style>
+  </head>
+  <body>
+
+  <div id="inspector"></div>
+
+  <div class="container-fluid">
+
+    <div>
+      <a href="#">LINK</a>
+      <table class=table>
+        <tbody>
+          <tr> <td><h1>h1. Bootstrap heading</h1></td></tr>
+          <tr> <td><h2>h2. Bootstrap heading</h2></td></tr>
+          <tr> <td><h3>h3. Bootstrap heading</h3></td></tr>
+          <tr> <td><h4>h4. Bootstrap heading</h4></td></tr>
+          <tr> <td><h5>h5. Bootstrap heading</h5></td></tr>
+          <tr> <td><h6>h6. Bootstrap heading</h6></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+          integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+          crossorigin="anonymous"></script>
+
+  <script src="inspector.js"></script>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+"
+        crossorigin="anonymous">
+</body>
+</html>
